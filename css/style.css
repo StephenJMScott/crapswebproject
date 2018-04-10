@@ -1,140 +1,99 @@
-body {
-	background: #212121;
-	font-size:22px;
-	line-height: 32px;
-	color: #ffffff;
-	word-wrap:break-word !important;
-	font-family: 'Open Sans', sans-serif;
-	padding-top: 0px;
-	margin-top: 0px;
-	
+/*Imported Fonts */
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+
+body, html, #container {
+  height: 100%;
 }
 
-
-
-nav {
-    background-color: #E64A19;
-    display: table;
-    width: 100%;
-    table-layout: fixed;
-    justify-content:space-between;
-    list-style: none;
-    text-align: center;
+body{
+    margin:0px auto;
+    padding:0px auto;
+    background-color:#5CC76A;
 }
 
-nav li{
-	display: table-cell;
-    text-align: center;
+.container{
+    min-height: calc(90vh - 100px)
 }
 
-nav ul {
+/*Header of Page */
+ul.heading {
+    width:100%;
+    margin:0 auto;
     padding:0;
+    list-style:none;
+    background-color:red;
+    color:gold;
+    text-align:center;
+    font-family: 'Pacifico', cursive;
+    max-height: 10vh;
+    display:flex;
+    flex:nowrap;
+}
+.heading li { 
+    display:inline-block;
+    width:33%;
     margin:0;
-    list-style: none;
-    position: relative;
-    text-align: center;
+    padding:0;
 }
 
-nav ul li {
-    margin: 0px -7px 0 0;
-    padding: 10px auto;
-    background-color: #E64A19;
-    text-align: center;
+.heading li img{
+    max-inline-size:30%;
+    minimum-inline-size: 20%;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
-
-nav ul li img{
-    max-width: 15vw;
+.heading li p{
+    -webkit-animation: color-change 1s infinite;
+    -moz-animation: color-change 1s infinite;
+    -o-animation: color-change 1s infinite;
+    -ms-animation: color-change 1s infinite;
+    animation: color-change 1s infinite;
 }
 
-nav ul ul {
-	display: none;
-	position: absolute; 
-	top: 60px; /* the height of the main nav */
+/* Horrible Flashy Title  Animation */
+@-webkit-keyframes color-change {
+    0% { color: gold; }
+    50% { color: silver; }
+    100% { color: gold; }
 }
-	
-/* Display Dropdowns on Hover */
-nav ul li:onclick > ul {
-	display:inherit;
+@-moz-keyframes color-change {
+    0% { color: gold; }
+    50% { color: silver; }
+    100% { color: gold; }
 }
-
-@media only screen and (min-width: 768px){
-nav ul li:hover > ul {
-	display:inherit;
+@-ms-keyframes color-change {
+    0% { color: gold; }
+    50% { color: silver; }
+    100% { color: gold; }
 }
+@-o-keyframes color-change {
+    0% { color: gold; }
+    50% { color: silver; }
+    100% { color: gold; }
 }
-	
-/* Fisrt Tier Dropdown */
-nav ul ul li {
-	width:170px;
-	float:none;
-	display:list-item;
-	position: relative;
-}
-
-.content{
-    min-height: calc(100vh - 220px);
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content:space-between;
+@keyframes color-change {
+    0% { color: gold; }
+    50% { color: silver; }
+    100% { color: gold; }
 }
 
 
-.footer{
-    padding-top: 0px;
-    height: 50px;
-}
-
-
-footer {
-    height:200px;
+footer{
+    min-height: 100px;
     background-color: black;
     color:white;
-    padding-top: 20px;
-    padding-bottom: 40px;
-    border-top: 1px solid #ededed ;
-    color: #A9A9A9 ;
+    padding: 20px, 10px;
+    margin: 20px, 10px;
 }
 
-
-.social-links{
-    padding-top: 10px;
-    padding-bottom: 10px;
-    
-    
-    
-}
-.social-links li a i{
-    width:32px;
-    height:32px;
-    padding:12px 0;
-    border-radius:50%;
-    font-size:13px;
-    line-height: 7px;
-    text-align: center;
-    color:#fafafa;
-    background:#8f8f8f;
-    transition:all 0.35s ease-in-out;
-    -moz-transition:all 0.35s ease-in-out;
-    -webkit-transition:all 0.35s ease-in-out;
-    -o-transition:all 0.35s ease-in-out;
+footer li{
+    display: inline-block;
+    margin-right: 20px;
+    padding-right: 20px;
 }
 
-.social-links li a i:hover{
-    background:#e84610;
-    
+#footer-details i::before{
+    color: white;
 }
 
-
-#participants1{
-
-}
-
-#participants1{
-
-}
-
-#game{
-	
-}
