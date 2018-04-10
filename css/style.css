@@ -10,8 +10,21 @@ body {
 	
 }
 
+
+
 nav {
     background-color: #E64A19;
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    justify-content:space-between;
+    list-style: none;
+    text-align: center;
+}
+
+nav li{
+	display: table-cell;
+    text-align: center;
 }
 
 nav ul {
@@ -19,14 +32,16 @@ nav ul {
     margin:0;
     list-style: none;
     position: relative;
+    text-align: center;
 }
 
 nav ul li {
     margin: 0px -7px 0 0;
-    display:inline-block;
-    width: 30%;
+    padding: 10px auto;
     background-color: #E64A19;
+    text-align: center;
 }
+
 
 nav ul li img{
     max-width: 15vw;
@@ -39,8 +54,14 @@ nav ul ul {
 }
 	
 /* Display Dropdowns on Hover */
+nav ul li:onclick > ul {
+	display:inherit;
+}
+
+@media only screen and (min-width: 768px){
 nav ul li:hover > ul {
 	display:inherit;
+}
 }
 	
 /* Fisrt Tier Dropdown */
@@ -51,3 +72,69 @@ nav ul ul li {
 	position: relative;
 }
 
+.content{
+    min-height: calc(100vh - 220px);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-between;
+}
+
+
+.footer{
+    padding-top: 0px;
+    height: 50px;
+}
+
+
+footer {
+    height:200px;
+    background-color: black;
+    color:white;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    border-top: 1px solid #ededed ;
+    color: #A9A9A9 ;
+}
+
+
+.social-links{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+    
+    
+}
+.social-links li a i{
+    width:32px;
+    height:32px;
+    padding:12px 0;
+    border-radius:50%;
+    font-size:13px;
+    line-height: 7px;
+    text-align: center;
+    color:#fafafa;
+    background:#8f8f8f;
+    transition:all 0.35s ease-in-out;
+    -moz-transition:all 0.35s ease-in-out;
+    -webkit-transition:all 0.35s ease-in-out;
+    -o-transition:all 0.35s ease-in-out;
+}
+
+.social-links li a i:hover{
+    background:#e84610;
+    
+}
+
+
+#participants1{
+
+}
+
+#participants1{
+
+}
+
+#game{
+	
+}
