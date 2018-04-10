@@ -1,0 +1,53 @@
+body {
+	background: #212121;
+	font-size:22px;
+	line-height: 32px;
+	color: #ffffff;
+	word-wrap:break-word !important;
+	font-family: 'Open Sans', sans-serif;
+	padding-top: 0px;
+	margin-top: 0px;
+	
+}
+
+nav {
+    background-color: #E64A19;
+}
+
+nav ul {
+    padding:0;
+    margin:0;
+    list-style: none;
+    position: relative;
+}
+
+nav ul li {
+    margin: 0px -7px 0 0;
+    display:inline-block;
+    width: 30%;
+    background-color: #E64A19;
+}
+
+nav ul li img{
+    max-width: 15vw;
+}
+
+nav ul ul {
+	display: none;
+	position: absolute; 
+	top: 60px; /* the height of the main nav */
+}
+	
+/* Display Dropdowns on Hover */
+nav ul li:hover > ul {
+	display:inherit;
+}
+	
+/* Fisrt Tier Dropdown */
+nav ul ul li {
+	width:170px;
+	float:none;
+	display:list-item;
+	position: relative;
+}
+
