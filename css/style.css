@@ -1,21 +1,18 @@
 /*Imported Fonts */
 @import url('https://fonts.googleapis.com/css?family=Pacifico');
 
-body, html, #container {
+body, html, #container{
   height: 100%;
 }
 
 body{
-    margin:0px auto;
-    padding:0px auto;
+    margin:0px;
+    padding:0px;
     background-color:#5CC76A;
 }
 
-.container{
-    min-height: calc(90vh - 100px)
-}
 
-/*Header of Page */
+/*header and footer */
 ul.heading {
     width:100%;
     margin:0 auto;
@@ -38,7 +35,7 @@ ul.heading {
 
 .heading li img{
     max-inline-size:30%;
-    minimum-inline-size: 20%;
+    min-height:6vh;
     padding-top: 5px;
     padding-bottom: 5px;
 }
@@ -80,11 +77,12 @@ ul.heading {
 
 
 footer{
-    min-height: 100px;
+    min-height: 10vh;
     background-color: black;
     color:white;
-    padding: 20px, 10px;
-    margin: 20px, 10px;
+    bottom: 0;
+    margin-top: 0px;
+    padding-top: 0px;
 }
 
 footer li{
@@ -93,7 +91,130 @@ footer li{
     padding-right: 20px;
 }
 
-#footer-details i::before{
+.desktopOnly{
+        display:none;
+        
+    }
+
+
+#footer-details i{
     color: white;
 }
+
+/*Main Part of Page */
+
+.container{
+    min-height: calc(100vh - 20vh);
+    display:flex;
+    flex-direction:column;
+    flex-wrap:nowrap;
+    justify-content:space-between;
+    align-items:center;
+    padding-bottom: 0px;
+}
+
+
+#participants1{
+    width:100vw;
+    display: flex;
+    flex-direction:row;
+    justify-content:space-evenly;
+    float:left;
+    text-align: center;
+    height: 100%;
+    top: 0px;
+    min-height:16vh;
+    background-color: grey;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    border:solid;
+    border-color: black;
+}
+
+#participants2{
+    width:100vw;
+    display: flex;
+    flex-direction:row;
+    justify-content:space-evenly;
+    float: right;
+    text-align: center;
+    height: 100%;
+    bottom:0px;
+    min-height:16vh;
+    background-color: grey;
+    border:solid;
+    border-color: black;
+}
+
+#game{
+    width: 100vw;
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
+    text-align: center;
+    min-height: 48vh;
+}
+
+#player1, #player2, #player3, #player4{
+    height:100%;
+    min-width: 50%;
+    align-items:center;
+    
+}
+
+
+
+/*Media Queries for Tablet and Bigger */
+@media only screen and (min-width: 768px){
+    .container{
+    flex-direction:row;
+}
+}
+
+@media only screen and (min-width: 768px){
+    #participants1{
+        width:25vw;
+        top:0;
+        bottom: 0;
+        flex-direction:column;
+        min-height: 80vh;
+        
+}
+    
+}
+@media only screen and (min-width: 768px){
+    #participants2{
+        width:25vw;
+        top:0;
+        bottom: 0;
+        flex-direction:column;
+        min-height: 80vh;
+}
+    
+}
+
+@media only screen and (min-width: 768px){
+    #player1, #player2, #player3, #player4{
+    height: 50%
+}
+}
+
+
+@media only screen and (min-width: 768px){
+    #game{
+        width: 40vw;
+        top:0px;
+        bottom:0px;
+        min-height: 80vh;
+    }
+}
+
+@media only screen and (min-width: 768px){
+    .desktopOnly{
+        display:inline-block !important
+        
+    }
+}
+
 
