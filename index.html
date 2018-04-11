@@ -13,17 +13,33 @@
         <ul class = "heading">
             <li><p>CRAPS</p></li>
             <li><img src = "css/assets/dice.png"></li>
-            <li><p>SET UP</p></li>
+            <li><p onclick id = "modalLaunch">SET UP</p>
+                
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <p>Players</p>
+                        <p>Rounds</p>
+                        <p>Purse</p>
+                    </div>
+                </div>
+                
+            </li> <!-- End of Set Up Modal.  -->
         </ul>
     </header>
         <div class = "container">
         
             <section id = "participants1"> 
                 <div id = "player1">
-                    <p>TEST FOR PLAYER 1 POSITION</p>
+                    <p>PLAYER 1</p>
+                    <p>Purse: €100 </p>
                 </div><!-- End of Player 1 -->
                 <div id = "player2">
-                    <p>TEST FOR PLAYER 2 POSITION</p>
+                    <p>PLAYER 2</p>
+                    <p>Purse: €100 </p>
                 </div><!-- End of Player 2 -->
             
             </section> <!-- end of first players section -->
@@ -34,10 +50,12 @@
             
             <section id = "participants2">
                 <div id = "player3">
-                    <p>TEST FOR PLAYER 3 POSITION</p>
+                    <p>PLAYER 3</p>
+                    <p>Purse: €100 </p>
                 </div><!-- End of Player 3 -->
                 <div id = "player4">
-                    <p>TEST FOR PLAYER 4 POSITION</p>
+                    <p>PLAYER 4</p>
+                    <p>Purse: €100 </p>
                 </div><!-- End of Player 4 -->
             </section> <!-- end of second players section -->
         </div> <!-- end of content -->
