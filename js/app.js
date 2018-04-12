@@ -44,9 +44,49 @@ document.querySelector(".rollTheDice").addEventListener("click",function(){
     var die2DOM = document.getElementById("right-dice");
     die2DOM.src = "css/assets/dice-" + die2 + ".png";
     
-    //3. add the dice and display the score
+    //3. add the dice and display the score, consider what phase of play we are in and if the roll is good or no
     
     var score = die1 + die2;
-    document.getElementById("messagedDisplayed").innerHTML = "You rolled a " + score + "!"  ;
+    var phase = "comeout";
+    var point;
+    
+    if (phase == "comeout"){
+        if (score == 2){
+            document.getElementById("messagedDisplayed").innerHTML = "Snake Eyes! You lose"  ;
+            score = 0;
+            phase = "comeout";
+        } else if (score == 3|| score == 12){
+            document.getElementById("messagedDisplayed").innerHTML  = "You crapped out! You lose";
+            score = 0;
+            phase = "comeout";
+        } else if ( score == 7 || score == 11){
+            document.getElementById("messagedDisplayed").innerHTML = "YOU WIN!!!";
+            score = 0;
+            phase = "comeout";
+        } else {
+            phase = "point";
+            point = score;
+            document.getElementById("messagedDisplayed").innerHTML = "Roll again, point set at " + score + ". Roll the same again to win";
+        }
+    } else{
+        //point phase //
+        if (score == 2 || score == 3 || score == 12 || score == 7) {
+            document.getElementById("messagedDisplayed").innerHTML  = "You crapped out! You lose";
+            score = 0;
+            phase = "comeout";
+        } else if (score == point) {
+            document.getElementById("messagedDisplayed").innerHTML  = score + " again!!! YOU WIN!!!";
+            score = 0;
+            phase = "comeout";
+        } else {
+            document.getElementById("messagedDisplayed").innerHTML  = "Roll again! Remember you want " + score;
+            phase = "point"
+            
+        }
+            
+    }
+   
+   
+   
     
 });
