@@ -151,7 +151,7 @@ footer li{
 /*Main Part of Page */
 
 .container{
-    min-height: calc(100vh - 20vh);
+    min-height: calc(100vh - 18vh);
     display:flex;
     flex-direction:column;
     flex-wrap:nowrap;

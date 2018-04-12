@@ -29,26 +29,28 @@ window.onclick = function(event) {
 
 //JavaScript for rolling the dice
 
+var die1, die2, die1DOM, die2DOM, score, phase, point;
+
+die1 = 1;
+die2 = 1;
+
+die1DOM = document.getElementById("left-dice");
+die2DOM = document.getElementById("right-dice");
+
+phase = "comeout";
 
 document.querySelector(".rollTheDice").addEventListener("click",function(){
-    
     //1. get two random numbers
-    var die1 = Math.floor(Math.random()*6) + 1;
-    var die2 = Math.floor(Math.random()*6) + 1;
+    die1 = Math.floor(Math.random()*6) + 1;
+    die2 = Math.floor(Math.random()*6) + 1;
     
     //2. update dice image to reflect random number
-    
-    var die1DOM = document.getElementById("left-dice");
     die1DOM.src = "css/assets/dice-" + die1 + ".png";
-    
-    var die2DOM = document.getElementById("right-dice");
     die2DOM.src = "css/assets/dice-" + die2 + ".png";
     
-    //3. add the dice and display the score, consider what phase of play we are in and if the roll is good or no
     
-    var score = die1 + die2;
-    var phase = "comeout";
-    var point;
+    //3. add the dice and display the score, consider what phase of play we are in and if the roll is good or not
+    score = die1 + die2;
     
     if (phase == "comeout"){
         if (score == 2){
@@ -75,18 +77,12 @@ document.querySelector(".rollTheDice").addEventListener("click",function(){
             score = 0;
             phase = "comeout";
         } else if (score == point) {
-            document.getElementById("messagedDisplayed").innerHTML  = score + " again!!! YOU WIN!!!";
+            document.getElementById("messagedDisplayed").innerHTML  = point + " again!!! YOU WIN!!!";
             score = 0;
             phase = "comeout";
         } else {
-            document.getElementById("messagedDisplayed").innerHTML  = "Roll again! Remember you want " + score;
+            document.getElementById("messagedDisplayed").innerHTML  = "Roll again! Remember you want " + point;
             phase = "point"
-            
         }
-            
     }
-   
-   
-   
-    
 });
