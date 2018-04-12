@@ -202,6 +202,22 @@ footer li{
     text-align: center;
     min-height: 48vh;
 }
+  
+  
+#dice-display{
+    display: flex;
+    flex-direction:row;
+    justify-content:space-evenly;
+    width:100%;
+}
+
+#dice-display img{
+    padding: 10px;
+    height: auto; 
+    width: auto; 
+    max-width: 20vw; 
+    max-height: 20vh;
+}
 
 #player1, #player2, #player3, #player4{
     min-height: 14vh;
