@@ -95,6 +95,8 @@ ul.heading {
 
 
 
+
+
 /* Horrible Flashy Title  Animation */
 @-webkit-keyframes color-change {
     0% { color: gold; }
@@ -158,6 +160,8 @@ footer li{
     justify-content:space-between;
     align-items:center;
     padding-bottom: 0px;
+    background: url("assets/greenfelt.jpg");
+    background-repeat: cover;
 }
 
 
@@ -176,6 +180,8 @@ footer li{
     margin-bottom: 0px;
     border:solid;
     border-color: black;
+    background: url("assets/wood.jpg");
+    background-repeat: cover;
 }
 
 #participants2{
@@ -191,6 +197,8 @@ footer li{
     background-color: grey;
     border:solid;
     border-color: black;
+    background: url("assets/wood.jpg");
+    background-repeat: cover;
 }
 
 #game{
@@ -201,6 +209,7 @@ footer li{
     align-items: center;
     text-align: center;
     min-height: 48vh;
+   
 }
   
   
@@ -227,6 +236,13 @@ footer li{
     background-color: #B86F41;
     border-color:black;
     border-radius: 5%;
+    background: url("assets/slate.jpg");
+    background-repeat: contain;
+    padding-top:0px; 
+    margin-top:0px;
+    font-size: 1rem;
+    font-family: 'Pacifico', cursive;
+    color:white;
 }
 
 

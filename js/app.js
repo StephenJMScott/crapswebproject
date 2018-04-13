@@ -26,6 +26,38 @@ window.onclick = function(event) {
     }
 }
 
+//End of Modal JS//
+
+/* JavaScript for Modal2 follows */
+
+// Get the modal
+var modal2 = document.getElementById('myModal2');
+
+// Get the button elemement to launch 
+var rulesbutton = document.getElementById("whatAreTheRules");
+
+// Get the <span> element that closes the modal
+var span2 = document.getElementsByClassName("close2")[0];
+
+// When the user clicks on the "Set Up", open the modal 
+rulesbutton.onclick = function() {
+    modal2.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span2.onclick = function() {
+    modal2.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal2) {
+        modal2.style.display = "none";
+    }
+}
+
+//end of modal2 js //
+
 
 //JavaScript for rolling the dice
 
@@ -86,3 +118,6 @@ document.querySelector(".rollTheDice").addEventListener("click",function(){
         }
     }
 });
+
+
+//end of dice roll js //
